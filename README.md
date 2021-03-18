@@ -1,6 +1,11 @@
 # breast_milk_HMOs_and_infant_appetite
-Concentrations in HMOs in breast milk over 24 months of lactation
+Analysis of how breast milk sugars called human milk oligosaccharides (HMOs) relate to infant appetite
 
-Please cite: Plows J.F., Berger P.K., Jones R., Alderete T., Yonemitsu C., Najera J.A., Khwajazada S., Bode L., Goran M. (2021) Longitudinal changes in human milk oligosaccharides (HMOs) over the course of two years of lactation in Hispanic mother-infant pairs. Journal of Nutrition. nxaa427.
+Techniques:
+- Multivariate linear regression
+- Principal Components Analysis (PCA)
+- Correlation matrix
 
-Link: https://doi.org/10.1093/jn/
+Please cite: Plows J.F., Berger P.K., Jones R., Yonemitsu C., Ryoo J., Alderete T., Bode L., Goran M. (2020) Associations between human milk oligosaccharides (HMOs) and eating behaviors in Hispanic infants at 1 and 6 months of age. Pediatric Obesity. e12686.
+
+Link: https://doi.org/10.1111/ijpo.12686
