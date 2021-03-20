@@ -3,7 +3,7 @@ Analysis of how breast milk sugars called human milk oligosaccharides (HMOs) rel
 
 Techniques:
 - Multivariate linear regression
-- Principal Components Analysis (PCA)
+- Principal Component Analysis (PCA)
 - Correlation matrix
 
 Please cite: Plows J.F., Berger P.K., Jones R., Yonemitsu C., Ryoo J., Alderete T., Bode L., Goran M. (2020) Associations between human milk oligosaccharides (HMOs) and eating behaviors in Hispanic infants at 1 and 6 months of age. Pediatric Obesity. e12686.
