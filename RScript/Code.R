@@ -33,7 +33,7 @@ dataSet6moNonSecretors <- dataSet6mo[dataSet6mo$Secretor %in% 0,]
 
 
 # #Make data matrix for PCA analysis
-which( colnames(dataSet1moSecretors)=="mom_age_at_birth" )
+# which( colnames(dataSet1moSecretors)=="mom_age_at_birth" )
 myvars <- c(1, 3:30) 
 dataSet_reduced <- dataSet1moSecretors[,myvars]
 
@@ -56,7 +56,11 @@ plot <- autoplot(pca, data = dataSet_reduced, colour = "food_responsiveness",
          # loadings = TRUE, loadings.colour = 'blue',
          # loadings.label = TRUE, loadings.label.size = 3)
 
-print(plot + labs(colour = "Food Responsiveness"))
+plot <- print(plot + labs(colour = "Food Responsiveness"))
+
+pdf("/Users/JasminePlows/Documents/GitHub/breast_milk_HMOs_and_infant_appetite/Plots/pca_plot.pdf")
+plot
+dev.off()
 
 # Plotting and extracting PCs
 pca <- prcomp(dataSet_reduced[-c(1:9)], scale = TRUE, center = TRUE)
@@ -70,12 +74,14 @@ pca.data <- data.frame(Sample=rownames(pca$x),
                        X=pca$x[,1],
                        Y=pca$x[,2])
 
-ggplot(data=pca.data, aes(x=X, y=Y, label=Sample)) +
+pca_plot <- ggplot(data=pca.data, aes(x=X, y=Y, label=Sample)) +
   geom_text() +
   xlab(paste("PC1 - ", pca.var.per[1], "%", sep="")) +
   ylab(paste("PC2 - ", pca.var.per[2], "%", sep="")) +
   theme_bw() +
   ggtitle("1 month PCA Plot")
+
+
 
 loading_scores <- pca$rotation[,1]
 hmo_scores <- abs(loading_scores)
